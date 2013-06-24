@@ -32,13 +32,6 @@ attribute :base_piddir, :kind_of => String, :default => '/var/run/redis'
 
 attribute :install_dir, :kind_of => String, :default => nil
 
-#Configuration attributes
-attribute :user, :kind_of => String, :default => 'redis'
-attribute :group, :kind_of => String, :default => 'redis'
-
-attribute :default_settings, :kind_of => Hash
-attribute :servers, :kind_of => Array
-
 def initialize(name, run_context=nil)
   super
   @action = :run
